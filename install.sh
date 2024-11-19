@@ -101,5 +101,7 @@ while true; do
 done
 
 echo "If the login fails, check the background service running status by running /etc/init.d/tailscaled status"
+
+rm /usr/sbin/tailscale*
 tailscale up --accept-dns=false --advertise-exit-node
 echo "The current machine architecture is arch_:${arch_}${endianness} | arch:${arch} . If it works successfully, leave a comment on this issue so that the author can revise the documentation in time: https://github.com/CH3NGYZ/tailscale-openwrt/issues/6"
