@@ -66,7 +66,7 @@ done
 
 
 # 下载安装包
-wget --tries=5 -c -t 60 https://raw.githubusercontent.com/Mit0chrondr1a/tailscale-openwrt/main/tailscale-openwrt.tgz
+wget --tries=5 -c -t 60 https://raw.githubusercontent.com/Mit0chrondr1a/tailscale-openwrt/refs/heads/main/tailscale-openwrt.tgz
 
 # 解压
 tar x -pzvC / -f tailscale-openwrt.tgz
