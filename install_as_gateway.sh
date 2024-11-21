@@ -103,12 +103,12 @@ done
 echo "If the login fails, check the background service running status by running /etc/init.d/tailscaled status"
 
 rm /usr/sbin/tailscale*
-tailscale up --accept-dns=false --advertise-exit-node --accept-routes
+tailscale up --accept-dns=false --advertise-exit-node --accept-routes --ssh
 
 # set the current device to be subnet gateway/router inside an infra
-#tailscale up --accept-dns=false --advertise-exit-node --accept-routes --advertise-routes=192.168.100.0/24
+#tailscale up --accept-dns=false --advertise-exit-node --accept-routes --ssh --advertise-routes=192.168.100.0/24
 
 # for occasions that demand original ip (disabling masquerade)
-#tailscale up --accept-dns=false --advertise-exit-node --accept-routes --advertise-routes=192.168.100.0/24 --snat-subnet-routes=false
+#tailscale up --accept-dns=false --advertise-exit-node --accept-routes --ssh --advertise-routes=192.168.100.0/24 --snat-subnet-routes=false
 
 echo "The current machine architecture is arch_:${arch_}${endianness} | arch:${arch} . If it works successfully, leave a comment on this issue so that the author can revise the documentation in time: https://github.com/CH3NGYZ/tailscale-openwrt/issues/6"
