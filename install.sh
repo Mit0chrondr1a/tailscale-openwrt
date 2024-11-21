@@ -75,8 +75,6 @@ tar x -pzvC / -f tailscale-openwrt.tgz
 rm tailscale-openwrt.tgz
 # 设定开机启动
 /etc/init.d/tailscale enable
-echo "Please wait 35s for some unspeakable reason..."
-sleep 35
 ls /etc/rc.d/*tailscale*
 #启动
 # /etc/init.d/tailscale start
